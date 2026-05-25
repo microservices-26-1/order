@@ -6,7 +6,6 @@ pipeline {
         stage('Dependencies') {
             steps {
                 build job: 'product', wait: true
-                build job: 'exchange', wait: true
             }
         }
         stage('Build') {
