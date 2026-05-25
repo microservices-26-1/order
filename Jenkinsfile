@@ -3,11 +3,9 @@ pipeline {
     agent any
 
     stages {
-        stage('Dependecies') {
+        stage('Dependencies') {
             steps {
                 build job: 'product', wait: true
-            }
-            steps {
                 build job: 'exchange', wait: true
             }
         }
