@@ -1,14 +1,14 @@
 package product_store.order;
 
+import lombok.Builder;
 import product_store.product.ProductDTO;
 
-import lombok.Builder;
+import java.math.BigDecimal;
 
 @Builder
-public record OrderItemOut (
+public record OrderItemOut(
     String id,
     ProductDTO product,
     Integer quantity,
-    Float total
-
+    BigDecimal total
 ) {}
